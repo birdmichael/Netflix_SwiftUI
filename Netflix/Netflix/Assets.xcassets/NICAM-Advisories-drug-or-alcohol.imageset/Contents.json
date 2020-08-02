@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "NICAM-Advisories-drug-or-alcohol.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "NICAM-Advisories-drug-or-alcohol@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "NICAM-Advisories-drug-or-alcohol@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
