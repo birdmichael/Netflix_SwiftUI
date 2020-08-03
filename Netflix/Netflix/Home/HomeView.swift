@@ -53,15 +53,7 @@ struct HomeNomalCategoryView: View {
             ScrollView(.horizontal, showsIndicators: false, content: {
                 HStack {
                     ForEach(category.movies) { item in
-                        ZStack {
-                            Text(item.name).padding()
-                            WebImage(url: URL(string: item.imageUrl))
-                                .resizable()
-                                .scaledToFill()
-                            
-                        }
-                        .frame(width: 110, height: 157.0)
-                        .clipped()
+                        MoiveItem(item: item)
                     }
                 }.padding(.horizontal, 8)
             })
@@ -124,5 +116,27 @@ struct HomePalyingCategoryView: View {
                 }.padding(.horizontal, 8)
             })
         }
+    }
+}
+
+struct MoiveItem: View {
+    @State var item: Moive
+    @State var isPresented = false
+    
+    var body: some View {
+        ZStack {
+            Text(item.name).padding()
+            WebImage(url: URL(string: item.imageUrl))
+                .resizable()
+                .scaledToFill()
+        }
+        .frame(width: 110, height: 157.0)
+        .clipped()
+        .fullScreenCover(isPresented: $isPresented, content: {
+            PlayerView()
+        })
+        .onTapGesture(count: 1, perform: {
+            isPresented = true
+        })
     }
 }

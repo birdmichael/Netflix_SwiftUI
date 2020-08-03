@@ -12,6 +12,10 @@
 		01C7496924D6F0A6009EB35A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C7496824D6F0A6009EB35A /* Assets.xcassets */; };
 		01C7496C24D6F0A6009EB35A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C7496B24D6F0A6009EB35A /* Preview Assets.xcassets */; };
 		01C7497524D6F693009EB35A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 01C7497424D6F693009EB35A /* SDWebImageSwiftUI */; };
+		01C87C2524D834290098D258 /* BMPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C87C2424D834290098D258 /* BMPlayer.swift */; };
+		01C87C2724D834650098D258 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C87C2624D834650098D258 /* PlayerView.swift */; };
+		01C87C2B24D8391E0098D258 /* BMPlayerLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C87C2A24D8391E0098D258 /* BMPlayerLayerView.swift */; };
+		01C87C3224D849DD0098D258 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C87C3124D849DD0098D258 /* AppDelegate.swift */; };
 		01EF497224D71F1200A05433 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF497124D71F1200A05433 /* HomeView.swift */; };
 		01EF497524D71F3700A05433 /* HomeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF497424D71F3700A05433 /* HomeStore.swift */; };
 		01EF497724D71F5800A05433 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF497624D71F5800A05433 /* HomeModel.swift */; };
@@ -24,6 +28,10 @@
 		01C7496824D6F0A6009EB35A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01C7496B24D6F0A6009EB35A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		01C7496D24D6F0A6009EB35A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01C87C2424D834290098D258 /* BMPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMPlayer.swift; sourceTree = "<group>"; };
+		01C87C2624D834650098D258 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		01C87C2A24D8391E0098D258 /* BMPlayerLayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMPlayerLayerView.swift; sourceTree = "<group>"; };
+		01C87C3124D849DD0098D258 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01EF497124D71F1200A05433 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		01EF497424D71F3700A05433 /* HomeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStore.swift; sourceTree = "<group>"; };
 		01EF497624D71F5800A05433 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
@@ -60,8 +68,11 @@
 		01C7496324D6F0A5009EB35A /* Netflix */ = {
 			isa = PBXGroup;
 			children = (
+				01C87C2C24D844710098D258 /* Base */,
+				01C87C2324D834130098D258 /* Player */,
 				01EF497324D71F1A00A05433 /* Home */,
 				01C7496424D6F0A5009EB35A /* NetflixApp.swift */,
+				01C87C3124D849DD0098D258 /* AppDelegate.swift */,
 				01C7496624D6F0A5009EB35A /* ContentView.swift */,
 				01C7496824D6F0A6009EB35A /* Assets.xcassets */,
 				01C7496D24D6F0A6009EB35A /* Info.plist */,
@@ -76,6 +87,23 @@
 				01C7496B24D6F0A6009EB35A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		01C87C2324D834130098D258 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				01C87C2424D834290098D258 /* BMPlayer.swift */,
+				01C87C2A24D8391E0098D258 /* BMPlayerLayerView.swift */,
+				01C87C2624D834650098D258 /* PlayerView.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		01C87C2C24D844710098D258 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		01EF497324D71F1A00A05433 /* Home */ = {
@@ -165,8 +193,12 @@
 			files = (
 				01EF497524D71F3700A05433 /* HomeStore.swift in Sources */,
 				01EF497224D71F1200A05433 /* HomeView.swift in Sources */,
+				01C87C2724D834650098D258 /* PlayerView.swift in Sources */,
+				01C87C3224D849DD0098D258 /* AppDelegate.swift in Sources */,
 				01C7496724D6F0A5009EB35A /* ContentView.swift in Sources */,
+				01C87C2524D834290098D258 /* BMPlayer.swift in Sources */,
 				01EF497724D71F5800A05433 /* HomeModel.swift in Sources */,
+				01C87C2B24D8391E0098D258 /* BMPlayerLayerView.swift in Sources */,
 				01C7496524D6F0A5009EB35A /* NetflixApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
