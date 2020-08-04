@@ -27,7 +27,7 @@ struct HomeView: View {
                 }
             }
             
-        }
+        }.navigationBarHidden(true)
     }
 }
 
@@ -133,7 +133,8 @@ struct MoiveItem: View {
         .frame(width: 110, height: 157.0)
         .clipped()
         .fullScreenCover(isPresented: $isPresented, content: {
-            PlayerView()
+            Player()
+                
         })
         .onTapGesture(count: 1, perform: {
             isPresented = true
