@@ -33,13 +33,12 @@ struct Player: View {
                 ZStack {
                     LinearGradient(gradient: .init(colors: [Color.black.opacity(0.8),
                                                             Color.black.opacity(0.1),
-                                                            Color.black.opacity(0.8),]),
+                                                            Color.black.opacity(0.8)]),
                                    startPoint: .top, endPoint: .bottom)
                     VStack {
                         HStack(alignment: .center) {
                             Spacer()
-                            Text("第1季第1集：留在室内")
-                                .foregroundColor(.white)
+                            palyerText("第1季第1集：留在室内")
                             Spacer()
                             Button(action: {
                                 presenting.wrappedValue.dismiss()
@@ -48,77 +47,34 @@ struct Player: View {
                             })
                         }
                         Spacer()
+                        
                         HStack {
                             Spacer()
-                            Button(action: {
-                                viewModel.time = CMTimeMakeWithSeconds(max(0, self.time.seconds - 5), preferredTimescale: viewModel.time.timescale)
-                            }, label: {
-                                Image(systemName: "gobackward.10")
-                                    .playControl()
-                            })
+                            palyControlButton(type: .goBackward)
                             Spacer()
-                            Button(action: {
-                                viewModel.play.toggle()
-                            }, label: {
-                                Image(systemName: "pause.fill")
-                                    .playControl()
-                            })
+                            palyControlButton(type: .play)
                             Spacer()
-                            Button(action: {
-                                viewModel.time = CMTimeMakeWithSeconds(viewModel.time.seconds + 10, preferredTimescale: viewModel.time.timescale)
-                            }, label: {
-                                Image(systemName: "goforward.10")
-                                    .playControl()
-                            })
+                            palyControlButton(type: .goForward)
                             Spacer()
                         }
                         Spacer()
                         
                         HStack {
-                            ZStack(alignment: .leading) {
-                                Slider(value: $celsius, in: 0...100, step: 0.1)
-                                    .accentColor(.red)
-                                    .foregroundColor(.yellow)
-                            }
-                            
-                            Text("\(celsius)")
-                                .foregroundColor(.white)
+                            Slider(value: $celsius, in: 0.0 ... 34.5, step: 0.1)
+                                .accentColor(.red)
+                                .frame(height: 2)
+
+                            palyerText("\(34.5 - celsius)")
                         }
+                        bottomAction()
                     }
                 
                 }
             .padding()
             
-        }
-        .onDisappear(perform: {
-            DispatchQueue.main.async {
-                AppDelegate.orientationLock = UIInterfaceOrientationMask.portrait
-                UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
-                UINavigationController.attemptRotationToDeviceOrientation()
-            }
-        })
-        .onAppear(perform: {
-            AppDelegate.orientationLock = UIInterfaceOrientationMask.landscape
-            UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
-            UINavigationController.attemptRotationToDeviceOrientation()
-        })
+        }.lockLandscape()
 
     
-    }
-}
-
-fileprivate struct PlayControlButton: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.system(size: 30))
-            .fixedSize()
-            .foregroundColor(.white)
-            .frame(width: 50, height: 50)
-    }
-}
-fileprivate extension Image {
-    func playControl() -> some View {
-        self.modifier(PlayControlButton())
     }
 }
 
@@ -136,6 +92,11 @@ class PlayerStore: ObservableObject {
     
     struct PlayerItem: Codable {
         var name:String = "视频名称"
+    }
+
+    /// 暂停播放
+    func playOrPause() {
+        play.toggle()
     }
 }
 

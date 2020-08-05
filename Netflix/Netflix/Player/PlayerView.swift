@@ -10,7 +10,7 @@ import GSPlayer
 import SwiftUI
 
 @available(iOS 13, *)
-public struct VideoPlayer {
+struct VideoPlayer {
     
     public enum State {
         
@@ -47,7 +47,7 @@ public struct VideoPlayer {
 }
 
 @available(iOS 13, *)
-public extension VideoPlayer {
+extension VideoPlayer {
     
     /// Set the preload size, the default value is 1024 * 1024, unit is byte.
     static var preloadByteCount: Int {
@@ -75,7 +75,7 @@ public extension VideoPlayer {
 }
 
 @available(iOS 13, *)
-public extension VideoPlayer {
+extension VideoPlayer {
     
     struct Config {
         struct Handler {

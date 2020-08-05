@@ -8,8 +8,6 @@
 import UIKit
 
 class AppDelegate: NSObject {
-    // 屏幕旋转锁定
-    static var orientationLock = UIInterfaceOrientationMask.portrait
     override init() {
         super.init()
     }
@@ -17,10 +15,6 @@ class AppDelegate: NSObject {
 }
 
 extension AppDelegate: UIApplicationDelegate {
-
-    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-        return AppDelegate.orientationLock
-    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         application.registerForRemoteNotifications()
