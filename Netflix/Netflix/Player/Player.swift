@@ -90,6 +90,19 @@ struct Player: View {
             .padding()
             
         }
+        .onDisappear(perform: {
+            DispatchQueue.main.async {
+                AppDelegate.orientationLock = UIInterfaceOrientationMask.portrait
+                UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+                UINavigationController.attemptRotationToDeviceOrientation()
+            }
+        })
+        .onAppear(perform: {
+            AppDelegate.orientationLock = UIInterfaceOrientationMask.landscape
+            UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+            UINavigationController.attemptRotationToDeviceOrientation()
+        })
+
     
     }
 }
