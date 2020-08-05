@@ -22,9 +22,7 @@ struct Tabbar: View {
     }
     
     private func navigationView(by type:TabbarType) -> some View {
-        NavigationView(content: {
-            HomeView()
-        })
+        HomeView()
         .tabItem {
             switch type {
             case .home:

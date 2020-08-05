@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SDWebImage
+import SDWebImageWebPCoder
 
 class AppDelegate: NSObject {
     override init() {
@@ -19,7 +21,6 @@ extension AppDelegate: UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         application.registerForRemoteNotifications()
         setupAppearance()
-        
         return true
     }
 }
@@ -33,3 +34,4 @@ extension AppDelegate {
         UITabBar.appearance().unselectedItemTintColor = #colorLiteral(red: 0.4862745098, green: 0.4862745098, blue: 0.4862745098, alpha: 1)
     }
 }
+

@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '14.0'
+#platform : '14.0'
 use_frameworks!
 inhibit_all_warnings!
 
@@ -10,6 +10,7 @@ target 'Netflix' do
   pod 'SDWebImageSwiftUI'
   pod 'R.swift'
   pod 'GSPlayer'
+  pod 'SDWebImageWebPCoder'
 
   # Pods for Netflix
 
