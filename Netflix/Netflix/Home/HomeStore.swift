@@ -8,6 +8,7 @@
 import Foundation
 
 class HomeStore: ObservableObject {
+    @Published var recommend: Moive = Moive(name: "123", des: "123", type: .movie)
     @Published var category: [Category] = []
     
     init() {
@@ -31,7 +32,7 @@ class HomeStore: ObservableObject {
                     Category(name: "动作惊悚片", movies: moives, type: Category.CategoryType.palying),
                     Category(name: "动作惊悚片", movies: moives),
                     Category(name: "Netflix原创作品", movies: moives, type: Category.CategoryType.original),
-                    Category(name: "乡村爱情片", movies: moives),
-        ]
+                    Category(name: "乡村爱情片", movies: moives)]
+
     }
 }

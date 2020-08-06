@@ -16,6 +16,7 @@ struct HomeView: View {
             Color(.black).edgesIgnoringSafeArea(.all)
             ScrollView {
                 VStack(spacing: 22.0) {
+                    RecommendItem(item: store.recommend)
                     ForEach(store.category) { cat in
                         if cat.type == .nomal {
                             HomeNomalCategoryView(category: cat)
@@ -32,6 +33,7 @@ struct HomeView: View {
             }
             
         }.navigationBarHidden(true)
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
@@ -165,7 +167,7 @@ struct MoiveItem: View {
             Text(item.name).padding()
             WebImage(url: URL(string: item.imageUrl))
                 .resizable()
-                .scaledToFill()
+                .scaledToFit()
         }
         .frame(width: 110, height: 157.0)
         .clipped()
@@ -218,7 +220,7 @@ struct WonderfulItem: View {
                             .overlay(
                                 VStack {
                                     Spacer()
-                                    LinearGradient(gradient: Gradient(colors: [item.wonderfulItem.color.opacity(0), item.wonderfulItem.color]),
+                                    LinearGradient(gradient: Gradient(colors: [item.wonderfulItem.color.opacity(0), item.wonderfulItem.color.opacity(0.7)]),
                                                    startPoint: .top, endPoint: .bottom
                                     )
                                     .frame(height: geometry.size.height * 0.7)
@@ -253,3 +255,88 @@ struct WonderfulItem: View {
     }
 }
 
+struct RecommendItem: View {
+    @State var item: Moive
+    @State var isPresented = false
+
+    var body: some View {
+        ZStack {
+            VStack {
+                ZStack {
+                    Text(item.name).padding()
+                    GeometryReader { geometry in
+                        WebImage(url: URL(string: item.wonderfulItem.imageUrl))
+                            .resizable()
+                            .scaledToFill()
+                            .frame(maxWidth: geometry.size.width)
+                            .overlay(
+                                VStack {
+                                    Spacer()
+                                    LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0), Color.black]),
+                                                   startPoint: .top, endPoint: .bottom
+                                    )
+                                    .frame(height: geometry.size.height * 0.5)
+                                }
+                            )
+
+                    }
+
+                }
+
+                Spacer()
+            }
+            VStack(alignment:.center) {
+                Spacer()
+                WebImage(url: URL(string: item.wonderfulItem.textImageUrl))
+                    .resizable()
+                    .padding(.bottom, 15.0)
+                    .scaledToFit()
+                    .frame(maxHeight: 80)
+                HStack(alignment: .center) {
+                    Spacer()
+                    VStack(spacing: 0.0) {
+                        Image("settings-plus")
+                        Text("我的片单")
+                            .font(.system(size: 14))
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                    }.frame(maxWidth:60)
+                    Spacer()
+                    HStack {
+                        Image("icon_play_solid")
+                        Text("播放")
+                            .fontWeight(.semibold)
+                            .foregroundColor(.black)
+                            .font(.system(size: 17))
+                    }
+                    .frame(width: 130, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .background(
+                        RoundedRectangle(cornerRadius: 3).foregroundColor(.white)
+                    , alignment: .center)
+                    Spacer()
+                    VStack(spacing: 0.0) {
+                        Image("icon_info")
+                        Text("资讯")
+                            .font(.system(size: 14))
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                    }.frame(maxWidth:40)
+                    Spacer()
+
+                }
+            }
+            
+
+        }
+        .frame(height: 550)
+        .clipped()
+        .fullScreenCover(isPresented: $isPresented, content: {
+            Player()
+        })
+        .onTapGesture(count: 1, perform: {
+            isPresented = true
+        })
+
+
+    }
+}

@@ -1,14 +1,5 @@
 PODS:
   - GSPlayer (0.2.16)
-  - libwebp (1.1.0):
-    - libwebp/demux (= 1.1.0)
-    - libwebp/mux (= 1.1.0)
-    - libwebp/webp (= 1.1.0)
-  - libwebp/demux (1.1.0):
-    - libwebp/webp
-  - libwebp/mux (1.1.0):
-    - libwebp/demux
-  - libwebp/webp (1.1.0)
   - R.swift (5.2.2):
     - R.swift.Library (~> 5.2.0)
   - R.swift.Library (5.2.0)
@@ -17,35 +8,27 @@ PODS:
   - SDWebImage/Core (5.8.4)
   - SDWebImageSwiftUI (1.5.0):
     - SDWebImage (~> 5.7)
-  - SDWebImageWebPCoder (0.6.1):
-    - libwebp (~> 1.0)
-    - SDWebImage/Core (~> 5.7)
 
 DEPENDENCIES:
   - GSPlayer
   - R.swift
   - SDWebImageSwiftUI
-  - SDWebImageWebPCoder
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - GSPlayer
-    - libwebp
     - R.swift
     - R.swift.Library
     - SDWebImage
     - SDWebImageSwiftUI
-    - SDWebImageWebPCoder
 
 SPEC CHECKSUMS:
   GSPlayer: 823f0b085a227fa4a6f853e5edbe70f7e2b28b76
-  libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
   SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
-  SDWebImageWebPCoder: d0dac55073088d24b2ac1b191a71a8f8d0adac21
 
-PODFILE CHECKSUM: de01707995f9bf828f9163b7d79bed9eecc2d739
+PODFILE CHECKSUM: aa96b40dd6f987cb2c979fb99e4653a62c0cd809
 
 COCOAPODS: 1.9.3

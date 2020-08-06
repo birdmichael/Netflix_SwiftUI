@@ -10,7 +10,6 @@ target 'Netflix' do
   pod 'SDWebImageSwiftUI'
   pod 'R.swift'
   pod 'GSPlayer'
-  pod 'SDWebImageWebPCoder'
 
   # Pods for Netflix
 
