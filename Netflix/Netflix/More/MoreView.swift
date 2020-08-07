@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct MoreView: View {
-    @State var viewModel = MoreStore()
+    @ObservedObject var viewModel: MoreStore
     var body: some View {
         VStack {
-            MoreUserListView(viewModel: $viewModel)
+            MoreUserListView(viewModel: viewModel)
 
             ScrollView {
                 VStack(spacing: 2.0) {
@@ -47,6 +47,6 @@ struct MoreView: View {
 
 struct MoreView_Previews: PreviewProvider {
     static var previews: some View {
-        MoreView()
+        MoreView(viewModel: .init())
     }
 }

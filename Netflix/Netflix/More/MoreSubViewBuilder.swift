@@ -53,19 +53,51 @@ struct MoreViewRow: View {
 }
 
 struct MoreUserListView: View {
-    @Binding var viewModel: MoreStore
+//    Remember, we can share ObservableObject between multiple views,
+//    that’s why it must be a reference type/class.
+    @ObservedObject var viewModel: MoreStore
     var body: some View {
-        HStack(spacing: 20) {
-            ForEach(viewModel.userList) { user in
-                VStack(spacing: 12) {
-                        WebImage(url: URL(string: user.avatarUrl))
-                            .resizable()
+        VStack {
+            HStack(spacing: 20) {
+                ForEach(viewModel.userList) { user in
+                    VStack(spacing: 12) {
+                        Color.black
                             .aspectRatio(1, contentMode: .fit)
-                    Text(user.nikeName).foregroundColor(.white)
+                            .overlay(
+                                WebImage(url: URL(string: user.avatarUrl))
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                            )
+                            .clipped()
+                            .cornerRadius(5.0)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 5).stroke(Color.white, lineWidth: user.id == viewModel.selectUserID ? 4 : 0)
+                            )
+                        Text(user.nikeName)
+                            .font(.system(size: 14))
+                            .fontWeight(user.id == viewModel.selectUserID ? .black : .light)
+                            .foregroundColor(.white)
+                            .lineLimit(1)
+                            .padding(.horizontal, 2.0)
+                    }
+                    .onTapGesture {
+                        viewModel.selectUserID = user.id
+                    }
                 }
             }
+            .padding(.horizontal, 10.0)
         }
-        .padding(.horizontal, 10.0)
+        HStack(alignment: .center) {
+            R.image.settingsElementEdit.image
+                .renderingMode(.template)
+                .foregroundColor(R.color.garyb3.color)
+            Text("管理使用者")
+                .foregroundColor(R.color.garyb3.color)
+                .font(.system(size: 14))
+                .fontWeight(.semibold)
+        }
+        .padding(.top, 50.0)
+        .padding(.bottom, 30.0)
     }
 }
 

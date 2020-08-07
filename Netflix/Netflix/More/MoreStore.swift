@@ -20,6 +20,6 @@ class MoreStore: ObservableObject {
     }
     init() {
         self.userList = [User(), User(), User(), User()]
-        self.selectUserID = userList.randomElement()!.id
+        self.selectUserID = userList.first!.id
     }
 }

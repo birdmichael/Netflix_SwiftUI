@@ -45,7 +45,7 @@ struct Tabbar: View {
                 }
                 .tag(type.rawValue)
             case .more:
-                MoreView()
+                MoreView(viewModel: .init())
                     .tabItem { R.image.mcflyMore.image.renderingMode(.template)
                     Text("更多")
                 }
