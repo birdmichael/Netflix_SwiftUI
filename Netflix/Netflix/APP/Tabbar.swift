@@ -20,29 +20,37 @@ struct Tabbar: View {
             }
         }.accentColor(.white)
     }
-    
+    @ViewBuilder
     private func navigationView(by type:TabbarType) -> some View {
-        HomeView()
-        .tabItem {
-            switch type {
+        switch type {
             case .home:
-                R.image.home.image.renderingMode(.template)
-                Text("首页")
+                HomeView()
+                    .tabItem { R.image.home.image.renderingMode(.template)
+                    Text("首页")
+                }
+                .tag(type.rawValue)
             case .search:
-                R.image.search.image.renderingMode(.template)
-                Text("搜寻")
+                HomeView().tabItem { R.image.search.image.renderingMode(.template)
+                    Text("搜寻")
+                }
+                .tag(type.rawValue)
             case .extras:
-                R.image.extrasCardsIcon.image.renderingMode(.template)
-                Text("即将上线")
+                HomeView().tabItem { R.image.extrasCardsIcon.image.renderingMode(.template)
+                    Text("即将上线")
+                }
+                .tag(type.rawValue)
             case .downloads:
-                R.image.mcflyDownloads.image.renderingMode(.template)
-                Text("下载内容")
+                HomeView().tabItem { R.image.mcflyDownloads.image.renderingMode(.template)
+                    Text("下载内容")
+                }
+                .tag(type.rawValue)
             case .more:
-                R.image.mcflyMore.image.renderingMode(.template)
-                Text("更多")
-            }
-        }.tag(type.rawValue)
-        
+                MoreView()
+                    .tabItem { R.image.mcflyMore.image.renderingMode(.template)
+                    Text("更多")
+                }
+                .tag(type.rawValue)
+        }
     }
 }
 

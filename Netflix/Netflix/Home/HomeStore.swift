@@ -8,24 +8,24 @@
 import Foundation
 
 class HomeStore: ObservableObject {
-    @Published var recommend: Moive = Moive(name: "123", des: "123", type: .movie)
+    @Published var recommend: Moive = Moive(name: "123", des: "123", types: MoiveType.allCases)
     @Published var category: [Category] = []
     
     init() {
-        let moives = [Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", type: MoiveType.movie),
-                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", type: MoiveType.movie),
-                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", type: MoiveType.movie),
-                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", type: MoiveType.movie),
-                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", type: MoiveType.movie),
-                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", type: MoiveType.movie),
-                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", type: MoiveType.movie),
-                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", type: MoiveType.movie),
-                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", type: MoiveType.movie),
-                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", type: MoiveType.movie),
-                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", type: MoiveType.movie),
-                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", type: MoiveType.movie),
-                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", type: MoiveType.movie),
-                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", type: MoiveType.movie)]
+        let moives = [Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", types: MoiveType.allCases),
+                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", types: MoiveType.allCases),
+                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", types: MoiveType.allCases),
+                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", types: MoiveType.allCases),
+                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", types: MoiveType.allCases),
+                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", types: MoiveType.allCases),
+                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", types: MoiveType.allCases),
+                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", types: MoiveType.allCases),
+                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", types: MoiveType.allCases),
+                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", types: MoiveType.allCases),
+                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", types: MoiveType.allCases),
+                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", types: MoiveType.allCases),
+                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", types: MoiveType.allCases),
+                      Moive(name: "雨伞学院", des: "眼看就要決定就讀的大學，艾兒得奮力適應她與諾亞的遠距離戀愛，兼顧和好友小禮之間日漸改變的關係，並面對她對新同學產生的感覺。", types: MoiveType.allCases)]
         
         category = [Category(name: "精彩预览", movies: moives, type: Category.CategoryType.wonderful),
                     Category(name: "热门选择", movies: moives),

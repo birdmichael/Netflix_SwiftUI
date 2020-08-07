@@ -88,14 +88,18 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
 
-  /// This `R.color` struct is generated, and contains static references to 4 colors.
+  /// This `R.color` struct is generated, and contains static references to 6 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
-    /// Color `gary_7c`.
-    static let gary_7c = Rswift.ColorResource(bundle: R.hostingBundle, name: "gary_7c")
+    /// Color `gary4c`.
+    static let gary4c = Rswift.ColorResource(bundle: R.hostingBundle, name: "gary4c")
+    /// Color `gary7c`.
+    static let gary7c = Rswift.ColorResource(bundle: R.hostingBundle, name: "gary7c")
     /// Color `gary_backgroud`.
     static let gary_backgroud = Rswift.ColorResource(bundle: R.hostingBundle, name: "gary_backgroud")
+    /// Color `garyb3`.
+    static let garyb3 = Rswift.ColorResource(bundle: R.hostingBundle, name: "garyb3")
     /// Color `title_color`.
     static let title_color = Rswift.ColorResource(bundle: R.hostingBundle, name: "title_color")
 
@@ -109,11 +113,20 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "gary_7c", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "gary4c", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
-    static func gary_7c(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.gary_7c, compatibleWith: traitCollection)
+    static func gary4c(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.gary4c, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "gary7c", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func gary7c(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.gary7c, compatibleWith: traitCollection)
     }
     #endif
 
@@ -123,6 +136,15 @@ struct R: Rswift.Validatable {
     @available(iOS 11.0, *)
     static func gary_backgroud(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.gary_backgroud, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "garyb3", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func garyb3(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.garyb3, compatibleWith: traitCollection)
     }
     #endif
 
@@ -2705,6 +2727,36 @@ struct R: Rswift.Validatable {
     struct uiApplicationSceneManifest {
       static let _key = "UIApplicationSceneManifest"
       static let uiApplicationSupportsMultipleScenes = true
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
+  struct string {
+    /// This `R.string.localizable` struct is generated, and contains static references to 1 localization keys.
+    struct localizable {
+      /// en translation: Play
+      ///
+      /// Locales: en, zh-Hans
+      static let play = Rswift.StringResource(key: "play", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+
+      /// en translation: Play
+      ///
+      /// Locales: en, zh-Hans
+      static func play(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("play", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "play"
+        }
+
+        return NSLocalizedString("play", bundle: bundle, comment: "")
+      }
 
       fileprivate init() {}
     }

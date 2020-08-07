@@ -13,6 +13,8 @@
 		0178148C24DA92E900828DB1 /* PlayerViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0178148B24DA92E900828DB1 /* PlayerViewStyle.swift */; };
 		0178148E24DA99CB00828DB1 /* PlayerViewSubViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0178148D24DA99CB00828DB1 /* PlayerViewSubViewBuilder.swift */; };
 		017E2BF624D99EDB00422554 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E2BF524D99EDB00422554 /* Tabbar.swift */; };
+		018738A724DD625B00FE4064 /* MoreStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018738A624DD625B00FE4064 /* MoreStore.swift */; };
+		018738A924DD62A900FE4064 /* MoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018738A824DD62A900FE4064 /* MoreModel.swift */; };
 		01C7496524D6F0A5009EB35A /* NetflixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C7496424D6F0A5009EB35A /* NetflixApp.swift */; };
 		01C7496924D6F0A6009EB35A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C7496824D6F0A6009EB35A /* Assets.xcassets */; };
 		01C7496C24D6F0A6009EB35A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C7496B24D6F0A6009EB35A /* Preview Assets.xcassets */; };
@@ -21,7 +23,14 @@
 		01EF497224D71F1200A05433 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF497124D71F1200A05433 /* HomeView.swift */; };
 		01EF497524D71F3700A05433 /* HomeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF497424D71F3700A05433 /* HomeStore.swift */; };
 		01EF497724D71F5800A05433 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF497624D71F5800A05433 /* HomeModel.swift */; };
+		01F2849524DCEAA900EB455F /* HomeSubViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2849424DCEAA900EB455F /* HomeSubViewBuilder.swift */; };
+		01F2849724DCF44200EB455F /* HomeViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2849624DCF44200EB455F /* HomeViewStyle.swift */; };
 		01F2F98D24D9A8F800D8766C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2F98C24D9A8F800D8766C /* Player.swift */; };
+		01F42EF524DD196C000B57A7 /* Frame+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F42EF424DD196C000B57A7 /* Frame+Extension.swift */; };
+		01F42EF824DD2988000B57A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01F42EFA24DD2988000B57A7 /* Localizable.strings */; };
+		01F42EFE24DD326D000B57A7 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F42EFD24DD326D000B57A7 /* MoreView.swift */; };
+		01F42F0024DD32B5000B57A7 /* MoreSubViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F42EFF24DD32B4000B57A7 /* MoreSubViewBuilder.swift */; };
+		01F42F0424DD38FF000B57A7 /* APPViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F42F0324DD38FF000B57A7 /* APPViewModifier.swift */; };
 		605428AC8E97464CD4ABE72C /* Pods_Netflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D3A559B336E9ACE6EA3D80E /* Pods_Netflix.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +41,8 @@
 		0178148B24DA92E900828DB1 /* PlayerViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewStyle.swift; sourceTree = "<group>"; };
 		0178148D24DA99CB00828DB1 /* PlayerViewSubViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewSubViewBuilder.swift; sourceTree = "<group>"; };
 		017E2BF524D99EDB00422554 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		018738A624DD625B00FE4064 /* MoreStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreStore.swift; sourceTree = "<group>"; };
+		018738A824DD62A900FE4064 /* MoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreModel.swift; sourceTree = "<group>"; };
 		01C7496124D6F0A5009EB35A /* Netflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Netflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C7496424D6F0A5009EB35A /* NetflixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixApp.swift; sourceTree = "<group>"; };
 		01C7496824D6F0A6009EB35A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,7 +53,15 @@
 		01EF497124D71F1200A05433 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		01EF497424D71F3700A05433 /* HomeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStore.swift; sourceTree = "<group>"; };
 		01EF497624D71F5800A05433 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		01F2849424DCEAA900EB455F /* HomeSubViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSubViewBuilder.swift; sourceTree = "<group>"; };
+		01F2849624DCF44200EB455F /* HomeViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewStyle.swift; sourceTree = "<group>"; };
 		01F2F98C24D9A8F800D8766C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		01F42EF424DD196C000B57A7 /* Frame+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Frame+Extension.swift"; sourceTree = "<group>"; };
+		01F42EF924DD2988000B57A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		01F42EFB24DD29EA000B57A7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		01F42EFD24DD326D000B57A7 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		01F42EFF24DD32B4000B57A7 /* MoreSubViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSubViewBuilder.swift; sourceTree = "<group>"; };
+		01F42F0324DD38FF000B57A7 /* APPViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPViewModifier.swift; sourceTree = "<group>"; };
 		565E42B0AABA7FFBFFEB157F /* Pods-Netflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netflix.debug.xcconfig"; path = "Target Support Files/Pods-Netflix/Pods-Netflix.debug.xcconfig"; sourceTree = "<group>"; };
 		5D3A559B336E9ACE6EA3D80E /* Pods_Netflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A060DCB47FFD288E3CBF2C82 /* Pods-Netflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netflix.release.xcconfig"; path = "Target Support Files/Pods-Netflix/Pods-Netflix.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +85,7 @@
 				01C87C3124D849DD0098D258 /* AppDelegate.swift */,
 				01C7496424D6F0A5009EB35A /* NetflixApp.swift */,
 				017E2BF524D99EDB00422554 /* Tabbar.swift */,
+				01F42F0324DD38FF000B57A7 /* APPViewModifier.swift */,
 			);
 			path = APP;
 			sourceTree = "<group>";
@@ -73,6 +93,7 @@
 		010BC72624D99D3C00EA7870 /* Help */ = {
 			isa = PBXGroup;
 			children = (
+				01F42EF324DD1923000B57A7 /* Extension */,
 				010BC72724D99D5000EA7870 /* RSwiftUI.swift */,
 				0178148924DA89E800828DB1 /* LandscapeViewModifier.swift */,
 			);
@@ -100,6 +121,7 @@
 		01C7496324D6F0A5009EB35A /* Netflix */ = {
 			isa = PBXGroup;
 			children = (
+				01F42EFC24DD3121000B57A7 /* More */,
 				010BC72624D99D3C00EA7870 /* Help */,
 				010BC72524D99D2900EA7870 /* APP */,
 				01C87C2C24D844710098D258 /* Base */,
@@ -107,6 +129,7 @@
 				01EF497324D71F1A00A05433 /* Home */,
 				010BC72324D99D2000EA7870 /* R.generated.swift */,
 				01C7496824D6F0A6009EB35A /* Assets.xcassets */,
+				01F42EFA24DD2988000B57A7 /* Localizable.strings */,
 				01C7496D24D6F0A6009EB35A /* Info.plist */,
 				01C7496A24D6F0A6009EB35A /* Preview Content */,
 			);
@@ -143,10 +166,31 @@
 			isa = PBXGroup;
 			children = (
 				01EF497124D71F1200A05433 /* HomeView.swift */,
+				01F2849424DCEAA900EB455F /* HomeSubViewBuilder.swift */,
+				01F2849624DCF44200EB455F /* HomeViewStyle.swift */,
 				01EF497424D71F3700A05433 /* HomeStore.swift */,
 				01EF497624D71F5800A05433 /* HomeModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		01F42EF324DD1923000B57A7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				01F42EF424DD196C000B57A7 /* Frame+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		01F42EFC24DD3121000B57A7 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				01F42EFD24DD326D000B57A7 /* MoreView.swift */,
+				01F42EFF24DD32B4000B57A7 /* MoreSubViewBuilder.swift */,
+				018738A624DD625B00FE4064 /* MoreStore.swift */,
+				018738A824DD62A900FE4064 /* MoreModel.swift */,
+			);
+			path = More;
 			sourceTree = "<group>";
 		};
 		76A8F0A5D441685147C01640 /* Frameworks */ = {
@@ -210,6 +254,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 01C7495824D6F0A5009EB35A;
 			productRefGroup = 01C7496224D6F0A5009EB35A /* Products */;
@@ -226,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01F42EF824DD2988000B57A7 /* Localizable.strings in Resources */,
 				01C7496C24D6F0A6009EB35A /* Preview Assets.xcassets in Resources */,
 				01C7496924D6F0A6009EB35A /* Assets.xcassets in Resources */,
 			);
@@ -302,14 +348,22 @@
 			files = (
 				01EF497524D71F3700A05433 /* HomeStore.swift in Sources */,
 				0178148A24DA89E800828DB1 /* LandscapeViewModifier.swift in Sources */,
+				01F2849524DCEAA900EB455F /* HomeSubViewBuilder.swift in Sources */,
+				01F42EF524DD196C000B57A7 /* Frame+Extension.swift in Sources */,
 				01EF497224D71F1200A05433 /* HomeView.swift in Sources */,
+				018738A724DD625B00FE4064 /* MoreStore.swift in Sources */,
+				01F42F0424DD38FF000B57A7 /* APPViewModifier.swift in Sources */,
 				01C87C2724D834650098D258 /* PlayerView.swift in Sources */,
 				017E2BF624D99EDB00422554 /* Tabbar.swift in Sources */,
 				0178148C24DA92E900828DB1 /* PlayerViewStyle.swift in Sources */,
+				01F42F0024DD32B5000B57A7 /* MoreSubViewBuilder.swift in Sources */,
 				01C87C3224D849DD0098D258 /* AppDelegate.swift in Sources */,
+				018738A924DD62A900FE4064 /* MoreModel.swift in Sources */,
+				01F2849724DCF44200EB455F /* HomeViewStyle.swift in Sources */,
 				01EF497724D71F5800A05433 /* HomeModel.swift in Sources */,
 				010BC72824D99D5000EA7870 /* RSwiftUI.swift in Sources */,
 				010BC72424D99D2000EA7870 /* R.generated.swift in Sources */,
+				01F42EFE24DD326D000B57A7 /* MoreView.swift in Sources */,
 				01F2F98D24D9A8F800D8766C /* Player.swift in Sources */,
 				01C7496524D6F0A5009EB35A /* NetflixApp.swift in Sources */,
 				0178148E24DA99CB00828DB1 /* PlayerViewSubViewBuilder.swift in Sources */,
@@ -318,11 +372,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		01F42EFA24DD2988000B57A7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01F42EF924DD2988000B57A7 /* en */,
+				01F42EFB24DD29EA000B57A7 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		01C7496E24D6F0A6009EB35A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -384,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

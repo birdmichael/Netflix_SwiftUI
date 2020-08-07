@@ -46,20 +46,28 @@ extension Player {
     func bottomAction() -> some View {
         HStack {
             Button(action: {}, label: {
-                Image("icon_episodes_outline")
+                R.image.icon_episodes_outline.image
                 palyerText("集数")
             }).accentColor(.white)
 
             Button(action: {}, label: {
-                Image("subtitlesAudio")
+                R.image.subtitlesAudio.image
                 palyerText("音讯和字幕")
             }).accentColor(.white)
 
             Button(action: {}, label: {
-                Image("icon_player_nextItem")
+                R.image.icon_player_nextItem.image
                 palyerText("下一集")
             }).accentColor(.white)
         }
 
+    }
+}
+
+extension Player {
+    func palyerText(_ text: String) -> some View {
+        Text(text)
+            .foregroundColor(.white)
+            .font(.system(size: 13))
     }
 }

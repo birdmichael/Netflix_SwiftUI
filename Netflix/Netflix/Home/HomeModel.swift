@@ -31,7 +31,7 @@ struct Moive: Identifiable {
     var name: String
     var des: String
     var imageUrl: String = imageUrls.randomElement()!
-    var type: MoiveType
+    var types: [MoiveType] = MoiveType.allCases
     var progress: Double = 0.5
     
     var wonderfulItem: WonderfulModel = WonderfulModel()
@@ -62,8 +62,8 @@ struct WonderfulModel {
 
 }
 
-enum MoiveType:String, Codable {
-    case movie
+enum MoiveType:String, Codable, CaseIterable {
+    case action,fantasy, comedy, science, musical
 }
 
 
