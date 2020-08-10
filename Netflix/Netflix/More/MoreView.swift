@@ -9,10 +9,10 @@ import SwiftUI
 
 struct MoreView: View {
     @ObservedObject var viewModel: MoreStore
+    @State var isShow = false
     var body: some View {
         VStack {
             MoreUserListView(viewModel: viewModel)
-
             ScrollView {
                 VStack(spacing: 2.0) {
                     MoreViewRow(image: R.image.settingsCheckmark.image, title: "我的片库") {

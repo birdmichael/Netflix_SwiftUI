@@ -79,7 +79,7 @@ struct Player: View {
 }
 
 class PlayerStore: ObservableObject {
-    @Published var mute: Bool = true
+    @Published var mute: Bool = false
     @Published var play: Bool = true
     @Published var time: CMTime = .zero
     @Published var autoReplay: Bool = true

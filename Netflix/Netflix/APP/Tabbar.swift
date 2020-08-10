@@ -35,7 +35,7 @@ struct Tabbar: View {
                 }
                 .tag(type.rawValue)
             case .extras:
-                HomeView().tabItem { R.image.extrasCardsIcon.image.renderingMode(.template)
+                ExtrasView().tabItem { R.image.extrasCardsIcon.image.renderingMode(.template)
                     Text("即将上线")
                 }
                 .tag(type.rawValue)
