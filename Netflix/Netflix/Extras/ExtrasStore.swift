@@ -9,16 +9,14 @@ import SwiftUI
 import AVKit
 
 class ExtrasStore: ObservableObject {
-    @Published var movies: [ExtrasModel] = []
+    @Published var movies: [ExtrasItemStore] = []
     @Published var visibleID: [UUID] = []
 
     init() {
         repeat {
-            movies.append(ExtrasModel())
+            movies.append(ExtrasItemStore())
         } while (movies.count < 20)
     }
-
-
     func addVisible(uuid: UUID) {
         visibleID.append(uuid)
     }
@@ -27,16 +25,16 @@ class ExtrasStore: ObservableObject {
     }
 }
 
-struct ExtrasModel: Identifiable {
+class ExtrasItemStore: ObservableObject {
     var id: UUID {
         model.id
     }
     @ObservedObject var contorl: PlayerStore
-    @State var model: Moive = ExtrasModel.movies.randomElement()!
+    @State var model: Moive = ExtrasItemStore.movies.randomElement()!
 
     init() {
         self.contorl = PlayerStore()
-        self.model = ExtrasModel.movies.randomElement()!
+        self.model = ExtrasItemStore.movies.randomElement()!
         self.contorl.play = false
     }
 
