@@ -1,18 +1,14 @@
----
-typora-root-url: ./Screenshot
----
-
 # Netflix_SwiftUI
 
 Home:
 
-![home](/home.gif)
+![home](https://github.com/birdmichael/Netflix_SwiftUI/blob/master/Screenshot/home.gif)
 
-![](/IMG_2819.PNG)
+![](https://github.com/birdmichael/Netflix_SwiftUI/blob/master/Screenshot/IMG_2819.PNG)
 
-![IMG_2820](/IMG_2820.PNG)
+![IMG_2820](https://github.com/birdmichael/Netflix_SwiftUI/blob/master/Screenshot/IMG_2820.PNG)
 
-![IMG_2821](/IMG_2821.PNG)
+![IMG_2821](https://github.com/birdmichael/Netflix_SwiftUI/blob/master/Screenshot/IMG_2821.PNG)
 
 # 难点：
 
@@ -45,7 +41,7 @@ Home:
 ```
 /**
  lock the View landscape disappear
- ```
+ 
  +-----------------------------+
  |  +---+                      |
  |  |   |                      |
@@ -54,7 +50,7 @@ Home:
  |  |   |         +----------+ |
  |  +---+                      |
  +-----------------------------+
- ```
+ 
  chane the appledate `orientationLock` to portrait, and set `UIDevice` for `orientation`
  */
 struct LandscapeViewModifier: ViewModifier {
@@ -104,7 +100,7 @@ struct MoreUserListView: View {
 
 4.图片既要fill，又要等比缩放
 
-![](/IMG_2805.JPG)
+![](https://github.com/birdmichael/Netflix_SwiftUI/blob/master/Screenshot/IMG_2805.JPG)
 
 ```
 Color.black
