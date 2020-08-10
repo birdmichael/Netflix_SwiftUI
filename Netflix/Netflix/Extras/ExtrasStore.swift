@@ -25,7 +25,7 @@ class ExtrasStore: ObservableObject {
     }
 }
 
-class ExtrasItemStore: ObservableObject {
+struct ExtrasItemStore: Identifiable {
     var id: UUID {
         model.id
     }

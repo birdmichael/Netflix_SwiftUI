@@ -17,7 +17,6 @@ struct ExtrasView: View {
         ScrollView {
             LazyVStack(alignment: .leading) {
                 ForEach(store.movies) { movie in
-
                     VStack {
                         Group {
                             if store.visibleID.first == movie.id {
