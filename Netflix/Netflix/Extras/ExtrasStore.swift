@@ -9,13 +9,21 @@ import SwiftUI
 import AVKit
 
 class ExtrasStore: ObservableObject {
-    @Published var movies: [ExtrasItemStore] = []
-    @Published var visibleID: [UUID] = []
+    @Published var movies: [Moive] = []
+    var visibleID: [UUID] = []  {
+        didSet {
+            if oldValue.first != visibleID.first {
+                objectWillChange.send()
+                print("发送~~~")
+            }
+        }
+    }
 
     init() {
-        repeat {
-            movies.append(ExtrasItemStore())
-        } while (movies.count < 20)
+//        repeat {
+//            movies.append(ExtrasItemStore())
+//        } while (movies.count < 20)
+        movies = ExtrasItemStore.movies
     }
     func addVisible(uuid: UUID) {
         visibleID.append(uuid)

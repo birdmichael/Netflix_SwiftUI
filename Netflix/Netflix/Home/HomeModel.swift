@@ -33,6 +33,7 @@ struct Moive: Identifiable {
     var imageUrl: String = imageUrls.randomElement()!
     var types: [MoiveType] = MoiveType.allCases
     var progress: Double = 0.5
+    var playUrl = "http://1253131631.vod2.myqcloud.com/26f327f9vodgzp1253131631/f4c0c9e59031868222924048327/f0.mp4"
     
     var wonderfulItem: WonderfulModel = WonderfulModel()
     var originalImageUrl:String = ["https://tva3.sinaimg.cn/large/6371019agy1ghge9j9rz6j209i0j0tan.jpg",
