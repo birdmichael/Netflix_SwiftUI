@@ -15,8 +15,9 @@ struct ExtrasView: View {
     
     var body: some View {
         ScrollView {
-            LazyVStack(alignment: .leading) {
+            VStack(alignment: .leading) {
                 ForEach(store.movies) { movie in
+
                     VStack {
                         Group {
                             if store.visibleID.first == movie.id {
